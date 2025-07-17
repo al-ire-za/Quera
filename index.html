@@ -73,63 +73,183 @@
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 container max-w-[1200px] mx-auto mt-5 p-4">
-            <h2 class="text-white text-xl font-bold lg:hidden md:hidden">دوره های کوئرا کالج</h2>
-            <aside class="hidden md:block lg:block lg:grid-cols-1 md:grid-cols-1">
-                <h2 class="text-white text-xl font-bold">دوره های کوئرا کالج</h2>
-                <div class="md:flex md:flex-col lg:flex lg:flex-col mt-6 gap-3">
+        <section class="container max-w-[1200px] mx-auto mt-5 p-4">
+            <h2 class="text-white text-xl font-bold">دوره های کوئرا کالج</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <aside class="hidden md:block md:grid-cols-1 sticky top-0 h-fit">
+                    
+                    <div class="md:flex md:flex-col mt-6 gap-3">
 
-                    <div class="flex justify-between bg-bg-cart rounded-xl p-3 border border-white/10">
-                        <span class="text-white/50 md:text-sm">فقط دوره‌های در حال یادگیری</span>
-                        <button></button>
+                        <div class="flex justify-between bg-bg-cart rounded-xl p-3 border border-white/10">
+                            <span class="text-white/50 md:text-sm">فقط دوره‌های در حال یادگیری</span>
+                            <button></button>
+                        </div>
+
+                        <div class="flex flex-col bg-bg-cart rounded-xl p-2 border border-white/10">
+                            <span class="text-white/50 p-2">مسیر یادگیری</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر پایتون-جنگو</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیرفرانت-ری اکت</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیرهوش مصنوعی</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر یادگیری ماشین</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر تحلیل داده</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر یادگیری عمیق</span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر پی اچ پی-لاراول</span>
+                            <Span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر المپیاد</Span>
+                        </div>
+
+                        <div class="flex flex-col bg-bg-cart rounded-xl p-0.5 border border-white/10 ">
+                            <span class="text-white/50 p-2">سطح</span>
+
+                            <div class="m-3 flex flex-col">
+                                <div class="flex gap-2 p-1 items-center">
+                                    <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
+                                    <span class="text-white cursor-pointer">مقدماتی</span>
+                                </div>
+                                <div class="flex gap-2 p-1 items-center">
+                                    <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
+                                    <span class="text-white cursor-pointer ">پیشرفته</span>
+                                </div>
+                                <div class="flex gap-2 p-1 items-center">
+                                    <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
+                                    <span class="text-white cursor-pointer ">تخصصی</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between bg-bg-cart rounded-xl p-3 border border-white/10">
+                            <span class="text-white/50 md:text-sm">فقط دوره‌های دوره های جدید</span>
+                            <button></button>
+                        </div>
+
+                        <button class="p-2 border border-bg-button rounded-md text-bg-button text-sm  hover:bg-bg-cart/80 w-full">مشاوره رایگان</button>
                     </div>
 
-                    <div class="flex flex-col bg-bg-cart rounded-xl p-2 border border-white/10">
-                        <span class="text-white/50 p-2">مسیر یادگیری</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر پایتون-جنگو</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیرفرانت-ری اکت</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیرهوش مصنوعی</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر یادگیری ماشین</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر تحلیل داده</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر یادگیری عمیق</span>
-                        <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر پی اچ پی-لاراول</span>
-                        <Span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر المپیاد</Span>
+                </aside>
+            
+                <main class="md:col-span-2 lg:col-span-3 flex flex-col gap-3">
+                    <div class="border border-white/20 mt-6 w-full rounded-md flex items-center">
+                        <input type="text" class="w-full bg-transparent p-2 text-right focus:outline-none" placeholder="جستجو دوره">
+                        <svg class="ml-2 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
                     </div>
 
-                    <div class="flex flex-col bg-bg-cart rounded-xl p-0.5 border border-white/10">
-                        <span class="text-white/50 p-2">سطح</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
 
-                        <div class="m-3 flex flex-col">
-                            <div class="flex gap-2 p-1 items-center">
-                                <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
-                                <span class="text-white cursor-pointer">مقدماتی</span>
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
                             </div>
-                            <div class="flex gap-2 p-1 items-center">
-                                <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
-                                <span class="text-white cursor-pointer ">پیشرفته</span>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
                             </div>
-                            <div class="flex gap-2 p-1 items-center">
-                                <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
-                                <span class="text-white cursor-pointer ">تخصصی</span>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-white/20 rounded-lg bg-bg-cart p-3
+                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                            <img src="./images/3650517838ca490f946fc115d95d0a0b..webp" alt="" class="bg-black/50 rounded-xl ">
+                            <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">مقدماتی</p>
+                                <p class="text-white text-xs">799,000</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="flex justify-between bg-bg-cart rounded-xl p-3 border border-white/10">
-                        <span class="text-white/50 md:text-sm">فقط دوره‌های دوره های جدید</span>
-                        <button></button>
-                    </div>
-
-                    <button class="p-2 border border-bg-button rounded-md text-bg-button text-sm  hover:bg-bg-cart/80 w-full">مشاوره رایگان</button>
-                </div>
-
-            </aside>
-            <main class="md:col-span-2 lg:col-span-3">
-                <div class="">
-
-                </div>
-
-            </main>
+                    
+                </main>
+            </div>
         </section>
 
 
