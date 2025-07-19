@@ -762,6 +762,10 @@ body {
   width: 3.5rem;
 }
 
+.w-10\/12 {
+  width: 83.333333%;
+}
+
 .max-w-\[1200px\] {
   max-width: 1200px;
 }
@@ -796,6 +800,10 @@ body {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-2 {
@@ -1356,6 +1364,14 @@ body {
 
   .lg\:rounded-tr-xl {
     border-top-right-radius: 0.75rem;
+  }
+
+  .lg\:border-b {
+    border-bottom-width: 1px;
+  }
+
+  .lg\:border-none {
+    border-style: none;
   }
 
   .lg\:text-start {
