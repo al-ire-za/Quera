@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa" dir="rtl">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style/output.css">
         <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
         <title>Quera</title>
     </head>
 
-    <body dir="rtl" class="bg-bg-page">
-        <header class="bg-bg-header p-2 mb-5">
-            <div class="container max-w-[1200px] mx-auto md:px-2 flex justify-between items-center ">
+    <body class="bg-bg-page font-['Vazirmatn']">
+        <header class="bg-bg-header p-2 mb-5 transition-colors duration-300">
+            <div class="container max-w-[1200px] mx-auto md:px-2 flex justify-between items-center">
                 <button class="md:hidden text-white">☰</button>
                 
                 <div class="flex gap-4 justify-center items-center">
@@ -30,6 +28,10 @@
                 </div>
                 
                 <div class="flex items-center gap-3">
+                    <button id="theme-toggle" class="text-white/80 hover:text-white focus:outline-none p-1 transition-colors" title="تغییر حالت نمایش">
+                        <i id="theme-icon" class="fa-solid fa-sun text-xl"></i>
+                    </button>
+
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                     </svg>
@@ -38,7 +40,7 @@
             </div>
         </header>
 
-        <section class="container max-w-[1200px] min-h-[400px] lg:h-[500px] lg:flex-row mx-auto flex flex-col justify-center items-center px-0  md:p-6 ">
+        <section class="container max-w-[1200px] min-h-[400px] lg:h-[500px] lg:flex-row mx-auto flex flex-col justify-center items-center px-0 md:p-6">
             <div class="w-full md:w-11/12 lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:justify-center lg:items-start">
                 <h1 class="text-5xl font-bold justify-center items-center mb-3 text-white text-center">کوئرا کالج</h1>
                 
@@ -59,18 +61,17 @@
                 </div>
 
                 <div class="lg:flex lg:flex-row lg:w-11/12 lg:mt-6 gap-2 hidden">
-                    <button class="w-1/2 bg-bg-button rounded-lg p-2 text-bg-page  hover:bg-sky-300 transition-colors duration-300 ">مشاهده همه دوره ها</button>
+                    <button class="w-1/2 bg-bg-button rounded-lg p-2 text-bg-page hover:bg-sky-300 transition-colors duration-300">مشاهده همه دوره ها</button>
                     <button class="w-1/2 bg-transparent rounded-lg p-2 text-bg-button border border-bg-button hover:bg-bg-cart/80 transition-colors duration-300">تست شخصیت برنامه نویسی</button>
                 </div>
-                
             </div>
             
             <div class="w-full md:w-11/12 h-full lg:w-1/2 justify-center">
-                <img src="./images/plp-hero.898f85b0.png" alt=""  class="w-full h-full object-contain lg:h-[380px]">
+                <img src="./images/plp-hero.898f85b0.png" alt="" class="w-full h-full object-contain lg:h-[380px]">
             </div>
 
             <div class="flex flex-col w-11/12 mt-10 gap-2 lg:hidden">
-                <button class="bg-bg-button rounded-lg p-2 text-bg-page  hover:bg-sky-300">مشاهده همه دوره ها</button>
+                <button class="bg-bg-button rounded-lg p-2 text-bg-page hover:bg-sky-300">مشاهده همه دوره ها</button>
                 <button class="bg-transparent rounded-lg p-2 text-bg-button border border-bg-button">تست شخصیت برنامه نویسی</button>
             </div>
         </section>
@@ -80,9 +81,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 
                 <aside class="hidden md:block md:grid-cols-1 sticky top-0 h-fit">
-                    
                     <div class="md:flex md:flex-col mt-6 gap-3">
-
                         <div class="flex justify-between bg-bg-cart rounded-xl p-3 border border-white/10">
                             <span class="text-white/50 md:text-sm">فقط دوره‌های در حال یادگیری</span>
                             <button></button>
@@ -97,12 +96,11 @@
                             <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر تحلیل داده</span>
                             <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر یادگیری عمیق</span>
                             <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر پی اچ پی-لاراول</span>
-                            <Span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر المپیاد</Span>
+                            <span class="text-white p-2 cursor-pointer hover:bg-white/20">مسیر المپیاد</span>
                         </div>
 
-                        <div class="flex flex-col bg-bg-cart rounded-xl p-0.5 border border-white/10 ">
+                        <div class="flex flex-col bg-bg-cart rounded-xl p-0.5 border border-white/10">
                             <span class="text-white/50 p-2">سطح</span>
-
                             <div class="m-3 flex flex-col">
                                 <div class="flex gap-2 p-1 items-center">
                                     <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
@@ -110,11 +108,11 @@
                                 </div>
                                 <div class="flex gap-2 p-1 items-center">
                                     <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
-                                    <span class="text-white cursor-pointer ">پیشرفته</span>
+                                    <span class="text-white cursor-pointer">پیشرفته</span>
                                 </div>
                                 <div class="flex gap-2 p-1 items-center">
                                     <span tabindex="0" class="inline-block w-4 h-4 border border-gray-300 rounded-sm focus:ring-2 focus:bg-bg-button"></span>
-                                    <span class="text-white cursor-pointer ">تخصصی</span>
+                                    <span class="text-white cursor-pointer">تخصصی</span>
                                 </div>
                             </div>
                         </div>
@@ -124,222 +122,27 @@
                             <button></button>
                         </div>
 
-                        <button class="p-2 border border-bg-button rounded-md text-bg-button text-sm  hover:bg-bg-cart/80 w-full">مشاوره رایگان</button>
+                        <button class="p-2 border border-bg-button rounded-md text-bg-button text-sm hover:bg-bg-cart/80 w-full">مشاوره رایگان</button>
                     </div>
-
                 </aside>
             
                 <main class="md:col-span-2 lg:col-span-3 flex flex-col gap-3">
                     <div class="border border-white/20 mt-6 w-full rounded-md flex items-center">
-                        <input type="text" class="w-full bg-transparent p-2 text-right focus:outline-none" placeholder="جستجو دوره">
+                        <input id="search-input" type="text" class="w-full bg-transparent p-2 text-right focus:outline-none text-white" placeholder="جستجو دوره">
                         <svg class="ml-2 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-5">
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/darvaze.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دروازه ورود به برنامه نویسی</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/php.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش PHP</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/laravel.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دوره بک اند لاراول</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/python.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دوره پایتون مقدماتی</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/cpp.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دوره مقدماتی CPP</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/database.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دوره اموزش عملی دیتابیس</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/exel.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش تخصصی EXEL</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/prompt.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش پرامپت نویسی</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/js.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دوره مقدماتی JS</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/htmlcss.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش HTML,CSS</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/front.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش فرانت</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/java.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">دوره مقدماتی جاوا</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/csharp.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش سی شارپ</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/linux.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش کار با لینوکس</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/ai.png" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش مقدماتی AI</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3  md:h-fit
-                        transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
-                            <img src="./images/nlp.webp" alt="" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
-                            <div class="w-full flex flex-col justify-between">
-                                <h2 class="mt-2 font-bold text-white/90 tetx-md">اموزش تخصصی NPL</h2>
-                                <div class="flex justify-between mt-5">
-                                    <p class="text-yellow-400 text-xs">مقدماتی</p>
-                                    <p class="text-white text-xs">799,000</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                    <!-- بخش دوره‌ها به صورت داینامیک با جاوا اسکریپت رندر می‌شود -->
+                    <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-5"></div>
                 </main>
             </div>
         </section>
 
         <section class="container max-w-[1200px] mx-auto flex flex-col px-4 mt-8">
             <div class="w-full flex flex-row gap-2 mb-5 items-center justify-center md:justify-between">
-                <div class="">
+                <div>
                     <h2 class="text-center md:text-right text-white text-lg md:text-3xl font-bold">بیشتر بخوانید</h2>
                     <p class="text-center md:text-right text-white text-xs md:text-lg md:font-bold">داغ‌ترین مقاله‌های کوئرا بلاگ برای علاقه‌مندان</p>
                 </div>
@@ -347,40 +150,36 @@
             </div>
 
             <div class="flex flex-col lg:flex-row gap-2">
-                <div class="w-full flex lg:flex-col bg-bg-cart rounded-xl border border-white/20
-                transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                <div class="w-full flex lg:flex-col bg-bg-cart rounded-xl border border-white/20 transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
                     <img src="images/maghale2.jpg" alt="" class="w-1/2 rounded-r-xl lg:w-full lg:h-full lg:rounded-r-none lg:rounded-tr-xl lg:rounded-tl-xl">
-                    <div class="flex flex-col  p-3">
-                        <span class=" text-white text-sm font-bold">با بهترین ابزارهای هوش مصنوعی برای برنامه نویسی اشنا شوید</span>
-                        <p class=" text-white/80 text-sm mt-2">طی چند سال اخیر که شاهد انقلابی بزرگ در حوزه هوش مصنوعی و یادگیری ماشین بوده‌ایم، دستیارهای هوش مصنوعی برای ...</p>
+                    <div class="flex flex-col p-3">
+                        <span class="text-white text-sm font-bold">با بهترین ابزارهای هوش مصنوعی برای برنامه نویسی اشنا شوید</span>
+                        <p class="text-white/80 text-sm mt-2">طی چند سال اخیر که شاهد انقلابی بزرگ در حوزه هوش مصنوعی و یادگیری ماشین بوده‌ایم، دستیارهای هوش مصنوعی برای ...</p>
                     </div>
                 </div>
 
                 <div class="w-full flex lg:flex-col gap-2">
-                    <div class="w-1/2 lg:w-full lg:h-1/2 flex flex-col lg:flex-row bg-bg-cart border border-white/20 rounded-xl
-                    transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                    <div class="w-1/2 lg:w-full lg:h-1/2 flex flex-col lg:flex-row bg-bg-cart border border-white/20 rounded-xl transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
                         <img src="images/maghale1.jpg" alt="" class="rounded-t-xl lg:w-1/2 lg:rounded-t-none lg:rounded-tr-xl lg:rounded-br-xl">
                         <div class="flex flex-col">
                             <span class="text-white text-xs font-bold p-3 rounded-lg lg:w-full">گیت چیست و چگونه کار میکند؟-همه چیز راجع به Git</span>
-                            <p class=" text-white/80 text-sm md:p-3 hidden md:block">گر تاکنون کوچک‌ترین مطالعه‌ای راجع به کدنویسی، برنامه نویسی و توسعه نرم‌افزار داشته بوده باشید، نام «گیت» قطعا به‌ گوش‌تان...</p>
+                            <p class="text-white/80 text-sm md:p-3 hidden md:block">گر تاکنون کوچک‌ترین مطالعه‌ای راجع به کدنویسی، برنامه نویسی و توسعه نرم‌افزار داشته بوده باشید، نام «گیت» قطعا به‌ گوش‌تان...</p>
                         </div>
                     </div>
-                    <div class="w-1/2 lg:w-full lg:h-1/2 flex flex-col lg:flex-row bg-bg-cart border border-white/20 rounded-xl
-                    transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                    <div class="w-1/2 lg:w-full lg:h-1/2 flex flex-col lg:flex-row bg-bg-cart border border-white/20 rounded-xl transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
                         <img src="images/maghale3.jpg" alt="" class="rounded-t-xl lg:w-1/2 lg:rounded-t-none lg:rounded-tr-xl lg:rounded-br-xl">
                         <div class="flex flex-col">
                             <span class="text-white text-xs font-bold p-3 rounded-lg lg:w-full">درآمد برنامه نویسی در ایران و جهان چه‌قدر است + 8 عامل تاثیرگذار بر درآمد برنامه نویسان</span>
-                            <p class=" text-white/80 text-sm md:p-3 hidden md:block">برنامه‌نویسی به یکی از مشاغل محوری در عصر حاضر تبدیل شده است. بسیاری به دنبال کسب اطلاعات دقیق در خصوص...</p>
+                            <p class="text-white/80 text-sm md:p-3 hidden md:block">برنامه‌نویسی به یکی از مشاغل محوری در عصر حاضر تبدیل شده است. بسیاری به دنبال کسب اطلاعات دقیق در خصوص...</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-full flex lg:flex-col bg-bg-cart rounded-xl border border-white/20
-                transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                <div class="w-full flex lg:flex-col bg-bg-cart rounded-xl border border-white/20 transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
                     <img src="images/maghale4.jpg" alt="" class="w-1/2 lg:w-full lg:h-full rounded-r-xl lg:rounded-r-none lg:rounded-tr-xl lg:rounded-tl-xl">
-                    <div class="flex flex-col  p-3">
-                        <span class=" text-white text-sm font-bold">۱۰ ابزار برتر دنیا برای ادیت عکس با هوش مصنوعی</span>
-                        <p class=" text-white/80 text-sm mt-2">ادیت عکس با هوش مصنوعی روشی نوین و کارآمد برای تولید تصاویر با کیفیت حرفه‌ای است. بسیاری از افراد، از...</p>
+                    <div class="flex flex-col p-3">
+                        <span class="text-white text-sm font-bold">۱۰ ابزار برتر دنیا برای ادیت عکس با هوش مصنوعی</span>
+                        <p class="text-white/80 text-sm mt-2">ادیت عکس با هوش مصنوعی روشی نوین و کارآمد برای تولید تصاویر با کیفیت حرفه‌ای است. بسیاری از افراد، از...</p>
                     </div>
                 </div>
 
@@ -390,7 +189,6 @@
 
         <footer class="mt-20 bg-bg-cart border-t border-white/20">
             <div class="p-8 flex flex-col container max-w-[1200px] mx-auto">
-
                 <div class="lg:flex lg:border-b border-white/20">
                     <div class="flex flex-col justify-center items-center gap-3">
                         <img src="images/iconfoot.svg" alt="" class="w-24 h-24">
@@ -406,41 +204,40 @@
                     <div class="flex justify-between lg:w-10/12 mt-10 text-white text-sm border-b border-white/20 lg:border-none p-6">
                         <div class="flex flex-col items-center gap-2">
                             <span>برنامه‌نویسان</span>
-                            <a href="">آموزش برنامه‌نویسی</a>
-                            <a href="">بوت‌کمپ‌های برنامه‌نویسی</a>
-                            <a href="">بانک سؤالات</a>
-                            <a href="">مسابقات</a>
-                            <a href="">کاریابی</a>
-                            <a href="">کلاس‌ها</a>
-                            <a href="">نظرسنجی برنامه‌نویسان ۱۴۰۳</a>
+                            <a href="#">آموزش برنامه‌نویسی</a>
+                            <a href="#">بوت‌کمپ‌های برنامه‌نویسی</a>
+                            <a href="#">بانک سؤالات</a>
+                            <a href="#">مسابقات</a>
+                            <a href="#">کاریابی</a>
+                            <a href="#">کلاس‌ها</a>
+                            <a href="#">نظرسنجی برنامه‌نویسان ۱۴۰۳</a>
                         </div>
 
                         <div class="flex flex-col items-center gap-2">
                             <span>شرکت ها</span>
-                            <a href="">پلتفرم مهارت سنجی</a>
-                            <a href="">ثبت اگهی شغلی</a>
-                            <a href="">درخواست مسابقه</a>
-                            <a href="">درخواست بوت کمپ</a>
+                            <a href="#">پلتفرم مهارت سنجی</a>
+                            <a href="#">ثبت اگهی شغلی</a>
+                            <a href="#">درخواست مسابقه</a>
+                            <a href="#">درخواست بوت کمپ</a>
                         </div>
 
                         <div class="flex flex-col items-center gap-2">
                             <span>رویدادها</span>
-                            <a href="">اسکیل آپ</a>
-                            <a href="">کدکاپ</a>
-                            <a href="">نمایشگاه کار</a>
+                            <a href="#">اسکیل آپ</a>
+                            <a href="#">کدکاپ</a>
+                            <a href="#">نمایشگاه کار</a>
                         </div>
 
                         <div class="flex flex-col items-center gap-2">
                             <span>کوئرا</span>
-                            <a href="">همکاری با ما</a>
-                            <a href="">تماس با ما</a>
-                            <a href="">درباره ما</a>
-                            <a href="">قوانین و مقررات</a>
-                            <a href="">کوئرا بلاگ</a>
+                            <a href="#">همکاری با ما</a>
+                            <a href="#">تماس با ما</a>
+                            <a href="#">درباره ما</a>
+                            <a href="#">قوانین و مقررات</a>
+                            <a href="#">کوئرا بلاگ</a>
                         </div>
                     </div>
                 </div>
-                
 
                 <div class="flex flex-col justify-center items-center p-4 gap-3 container max-w-[1200px] mx-auto">
                     <img src="images/parspack-no-label.3-a5fcad6be077.png" alt="" class="w-14 h-14">
@@ -449,8 +246,81 @@
             </div>
         </footer>
 
-        
+        <script>
+            const courses = [
+                { title: "دروازه ورود به برنامه نویسی", level: "مقدماتی", price: "799,000", image: "./images/darvaze.webp" },
+                { title: "اموزش PHP", level: "مقدماتی", price: "799,000", image: "./images/php.webp" },
+                { title: "دوره بک اند لاراول", level: "مقدماتی", price: "799,000", image: "./images/laravel.webp" },
+                { title: "دوره پایتون مقدماتی", level: "مقدماتی", price: "799,000", image: "./images/python.webp" },
+                { title: "دوره مقدماتی CPP", level: "مقدماتی", price: "799,000", image: "./images/cpp.webp" },
+                { title: "دوره اموزش عملی دیتابیس", level: "مقدماتی", price: "799,000", image: "./images/database.webp" },
+                { title: "اموزش تخصصی EXEL", level: "مقدماتی", price: "799,000", image: "./images/exel.webp" },
+                { title: "اموزش پرامپت نویسی", level: "مقدماتی", price: "799,000", image: "./images/prompt.webp" },
+                { title: "دوره مقدماتی JS", level: "مقدماتی", price: "799,000", image: "./images/js.webp" },
+                { title: "اموزش HTML,CSS", level: "مقدماتی", price: "799,000", image: "./images/htmlcss.webp" },
+                { title: "اموزش فرانت", level: "مقدماتی", price: "799,000", image: "./images/front.webp" },
+                { title: "دوره مقدماتی جاوا", level: "مقدماتی", price: "799,000", image: "./images/java.webp" },
+                { title: "اموزش سی شارپ", level: "مقدماتی", price: "799,000", image: "./images/csharp.webp" },
+                { title: "اموزش کار با لینوکس", level: "مقدماتی", price: "799,000", image: "./images/linux.webp" },
+                { title: "اموزش مقدماتی AI", level: "مقدماتی", price: "799,000", image: "./images/ai.png" },
+                { title: "اموزش تخصصی NPL", level: "مقدماتی", price: "799,000", image: "./images/nlp.webp" }
+            ];
 
+            const coursesGrid = document.getElementById("courses-grid");
+            const searchInput = document.getElementById("search-input");
 
+            function renderCourses(items) {
+                if (items.length === 0) {
+                    coursesGrid.innerHTML = `<p class="text-white/60 col-span-full text-center py-8">دوره‌ای یافت نشد.</p>`;
+                    return;
+                }
+
+                coursesGrid.innerHTML = items.map(course => `
+                    <article class="border-b border-white/20 md:border md:border-white/20 md:rounded-lg md:bg-bg-cart px-3 py-4 md:p-3 md:h-fit transform transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex md:flex-col gap-2 md:gap-0">
+                        <img src="${course.image}" alt="${course.title}" class="border border-white/20 md:border-none bg-black/50 rounded-md md:rounded-xl object-contain w-20 h-28 md:w-fit md:h-fit">
+                        <div class="w-full flex flex-col justify-between">
+                            <h2 class="mt-2 font-bold text-white/90 text-md">${course.title}</h2>
+                            <div class="flex justify-between mt-5">
+                                <p class="text-yellow-400 text-xs">${course.level}</p>
+                                <p class="text-white text-xs">${course.price} تومان</p>
+                            </div>
+                        </div>
+                    </article>
+                `).join('');
+            }
+
+            renderCourses(courses);
+
+            searchInput.addEventListener("input", (e) => {
+                const query = e.target.value.trim().toLowerCase();
+                const filtered = courses.filter(course => course.title.toLowerCase().includes(query));
+                renderCourses(filtered);
+            });
+
+            const themeToggleBtn = document.getElementById("theme-toggle");
+            const themeIcon = document.getElementById("theme-icon");
+
+            function setTheme(isLight) {
+                if (isLight) {
+                    document.body.classList.add("light-theme");
+                    themeIcon.classList.replace("fa-sun", "fa-moon");
+                    localStorage.setItem("theme", "light");
+                } else {
+                    document.body.classList.remove("light-theme");
+                    themeIcon.classList.replace("fa-moon", "fa-sun");
+                    localStorage.setItem("theme", "dark");
+                }
+            }
+
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                setTheme(true);
+            }
+
+            themeToggleBtn.addEventListener("click", () => {
+                const isCurrentLight = document.body.classList.contains("light-theme");
+                setTheme(!isCurrentLight);
+            });
+        </script>
     </body>
 </html>

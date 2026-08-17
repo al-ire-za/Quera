@@ -3,7 +3,62 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-vazir;
-  }
+    body {
+        @apply font-vazir;
+    }
+
+    /* استایل‌های حالت لایت */
+    body.light-theme {
+        background-color: #f8fafc !important;
+        color: #1e293b;
+    }
+    body.light-theme header {
+        background-color: #ffffff !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    }
+    body.light-theme nav a {
+        color: #64748b !important;
+    }
+    body.light-theme nav a:hover {
+        color: #0f172a !important;
+    }
+    body.light-theme header svg, 
+    body.light-theme header button {
+        color: #475569 !important;
+    }
+    body.light-theme h1, 
+    body.light-theme h2, 
+    body.light-theme .text-white {
+        color: #0f172a !important;
+    }
+    body.light-theme .text-white\/90, 
+    body.light-theme .text-white\/80 {
+        color: #334155 !important;
+    }
+    body.light-theme .text-white\/50 {
+        color: #64748b !important;
+    }
+    body.light-theme .bg-bg-cart, 
+    body.light-theme aside div[class*="bg-bg-cart"],
+    body.light-theme article {
+        background-color: #ffffff !important;
+        border-color: #e2e8f0 !important;
+    }
+    body.light-theme input#search-input {
+        color: #0f172a !important;
+    }
+    body.light-theme div:has(> #search-input) {
+        background-color: #ffffff;
+        border-color: #cbd5e1 !important;
+    }
+    body.light-theme footer {
+        background-color: #f1f5f9 !important;
+        border-color: #e2e8f0 !important;
+    }
+    body.light-theme footer a {
+        color: #64748b !important;
+    }
+    body.light-theme footer a:hover {
+        color: #0f172a !important;
+    }
 }
